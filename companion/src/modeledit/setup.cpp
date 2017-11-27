@@ -509,9 +509,9 @@ void ModulePanel::update()
   ui->multiSubType->setCurrentIndex(module.subType);
 
   ui->autoBind->setVisible(mask & MASK_MULTIMODULE);
-  ui->autoBind->setChecked(module.multi.autoBindMode ? Qt::Checked : Qt::Unchecked);
+  ui->autoBind->setCheckState(module.multi.autoBindMode ? Qt::Checked : Qt::Unchecked);
   ui->lowPower->setVisible(mask & MASK_MULTIMODULE);
-  ui->lowPower->setChecked(module.multi.lowPowerMode ? Qt::Checked : Qt::Unchecked);
+  ui->lowPower->setCheckState(module.multi.lowPowerMode ? Qt::Checked : Qt::Unchecked);
 
 
   ui->label_failsafeMode->setVisible(mask & MASK_FAILSAFES);
